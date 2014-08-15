@@ -1,4 +1,4 @@
-class Fact < ActiveRecord::Base
+class Fact < StatisticActiveRecord
   belongs_to :session, inverse_of: :facts
   belongs_to :event, inverse_of: :facts
   belongs_to :context, polymorphic: true

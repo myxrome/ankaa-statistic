@@ -1,2 +1,2 @@
-class EventType < ActiveRecord::Base
+class EventType < StatisticActiveRecord
 end
