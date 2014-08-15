@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3602311908">
+    <data-source source="LOCAL" name="Rails ankaa-statistic: development" uuid="4557eda1-2643-4164-bf59-06774f009f98">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/statisticdb</jdbc-url>
+      <user-name>statistic</user-name>
+      <user-password>dfe1dfc6dfc5dfdadfc3dfc1df9bdf9d</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails ankaa-statistic: test" uuid="8a55e560-1e73-4967-ab43-5e5bc34490a3">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/ankaa-statistic_test</jdbc-url>
+      <user-name>statistic</user-name>
+      <user-password>dfe1dfc6dfc5dfdadfc3dfc1df9bdf9d</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails ankaa-statistic: production" uuid="1ea7501d-9cbe-4009-9c34-8bc8ea261dc3">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/ankaa-statistic_production</jdbc-url>
+      <user-name>ankaa-statistic</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfebdfe4dfe1dfebdfebdf87dff9dffedfebdffedfe3dff9dffedfe3dfe9dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails ankaa-statistic: default" uuid="42caa441-0554-4ebd-b9aa-87e94d4521ef">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/statisticdb</jdbc-url>
+      <user-name>statistic</user-name>
+      <user-password>dfe1dfc6dfc5dfdadfc3dfc1df9bdf9d</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
