@@ -24,6 +24,9 @@ default: &default
   pool: 5
   timeout: 5000
 
+development:
+  <<: *default
+
 statistic_development:
   <<: *default
 
