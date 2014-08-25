@@ -3,7 +3,7 @@ class Fact < StatisticActiveRecord
   belongs_to :event, inverse_of: :facts
   belongs_to :context, polymorphic: true
 
-  belongs_to :next, class_name: 'Fact'
-  has_one :previous, class_name: 'Fact', foreign_key: 'previous_id'
+  has_many :fact_details, inverse_of: :fact, dependent: :destroy
+  accepts_nested_attributes_for :fact_details, reject_if: :all_blank, allow_destroy: true
 
 end
