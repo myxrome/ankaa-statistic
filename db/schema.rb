@@ -66,11 +66,13 @@ ActiveRecord::Schema.define(version: 20140825184616) do
     t.integer  "device_id"
     t.datetime "started_at"
     t.datetime "finished_at"
+    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "sessions", ["device_id"], name: "index_sessions_on_device_id", using: :btree
   add_index "sessions", ["started_at", "finished_at"], name: "index_sessions_on_started_at_and_finished_at", using: :btree
+  add_index "sessions", ["status"], name: "index_sessions_on_status", using: :btree
 
 end
