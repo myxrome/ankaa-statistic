@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-EventType.create! [{name: 'Counter'}, {name: 'Timer'}]
+EventType.create! [{name: 'Unknown'}, {name: 'Counter'}, {name: 'Timer'}]
