@@ -22,6 +22,4 @@ tmp
 # Ignore RubyMine
 \.idea/workspace.xml
 
-# Ignore env config file
-config/application.yml
 
