@@ -1,4 +1,4 @@
-module Statistic
+module AnkaaStatistic
   class Engine < ::Rails::Engine
 
     initializer :append_migrations do |app|
