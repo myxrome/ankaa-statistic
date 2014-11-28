@@ -1,7 +1,5 @@
 class CreateCrashReports < ActiveRecord::Migration
   def change
-    ActiveRecord::Base.establish_connection "statistic_#{Rails.env}".to_sym
-
     create_table :crash_reports do |t|
       t.string :name
       t.string :version
