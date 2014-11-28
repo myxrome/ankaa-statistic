@@ -1,5 +1,7 @@
 class CreateSessions < ActiveRecord::Migration
   def change
+    ActiveRecord::Base.establish_connection "statistic_#{Rails.env}".to_sym
+
     create_table :sessions do |t|
       t.integer :device_id
       t.datetime :started_at

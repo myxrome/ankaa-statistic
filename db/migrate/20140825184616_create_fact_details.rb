@@ -1,5 +1,7 @@
 class CreateFactDetails < ActiveRecord::Migration
   def change
+    ActiveRecord::Base.establish_connection "statistic_#{Rails.env}".to_sym
+
     create_table :fact_details do |t|
       t.integer :fact_id
       t.integer :order
