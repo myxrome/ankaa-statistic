@@ -1,2 +1,2 @@
-class CrashReport < ActiveRecord::Base
+class CrashReport < StatisticActiveRecord
 end
