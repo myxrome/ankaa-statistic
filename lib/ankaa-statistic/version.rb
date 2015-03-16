@@ -1,3 +1,3 @@
 module AnkaaStatistic
-  VERSION = '0.9.4.2'
+  VERSION = '0.9.5'
 end
