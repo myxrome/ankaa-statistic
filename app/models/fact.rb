@@ -17,13 +17,13 @@ class Fact < StatisticActiveRecord
 
   def normalize_context
     if self.external_context
-      if self.context
+      if self.context_id
         Fact.where(external_context: self.external_context).where(context: nil).each do |fact|
           fact.update_attributes! context: self.context
         end
       else
         fact = Fact.where(external_context: self.external_context).where.not(context: nil).first
-        update_attributes!(context: fact.context) if fact
+        update_attributes!(context_id: fact.context_id, context_type: fact.context_type) if fact
       end
     end
   end
