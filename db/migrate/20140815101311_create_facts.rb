@@ -1,7 +1,8 @@
 class CreateFacts < ActiveRecord::Migration
   def change
     create_table :facts do |t|
-      t.integer :session_id
+      t.integer :cause_id
+      t.string :cause_type
       t.integer :event_id
       t.integer :context_id
       t.string :context_type
@@ -9,7 +10,7 @@ class CreateFacts < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :facts, :session_id
+    add_index :facts, [:cause_id, :cause_type]
     add_index :facts, [:context_id, :context_type]
   end
 end

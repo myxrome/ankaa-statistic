@@ -1,6 +1,6 @@
 class Session < StatisticActiveRecord
   belongs_to :device, inverse_of: :sessions
-  has_many :facts, inverse_of: :session
+  has_many :facts, as: :cause
   accepts_nested_attributes_for :facts, reject_if: :all_blank, allow_destroy: true
   before_save :define_status, :normalize_session
 
