@@ -7,13 +7,13 @@ class CreateCrashReports < ActiveRecord::Migration
       t.string :exception
       t.string :cause
       t.string :stacktrace
-      t.string :hash
+      t.string :key
       t.datetime :happened_at
 
       t.timestamps
     end
 
     add_index :crash_reports, :device_id
-    add_index :crash_reports, [:hash, :happened_at]
+    add_index :crash_reports, [:key, :happened_at]
   end
 end
