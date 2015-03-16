@@ -1,10 +1,11 @@
 class CreateCrashReports < ActiveRecord::Migration
   def change
     create_table :crash_reports do |t|
+      t.integer :device_id
       t.string :name
       t.string :version
       t.string :exception
-      t.string :message
+      t.string :cause
       t.string :stacktrace
       t.string :hash
       t.datetime :happened_at
@@ -12,6 +13,7 @@ class CreateCrashReports < ActiveRecord::Migration
       t.timestamps
     end
 
+    add_index :crash_reports, :device_id
     add_index :crash_reports, [:hash, :happened_at]
   end
 end
