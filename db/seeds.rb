@@ -5,10 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-EventType.find_or_create_by! name: 'Unknown'
-counter = EventType.find_or_create_by! name: 'Counter'
-timer = EventType.find_or_create_by! name: 'Timer'
-
-Event.find_or_create_by! tag: 'VALUE_CONVERSION' do |event|
-  event.update_attributes! name: 'Value Conversion', event_type: counter
-end
