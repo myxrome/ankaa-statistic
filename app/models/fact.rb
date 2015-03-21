@@ -16,14 +16,14 @@ class Fact < StatisticActiveRecord
   end
 
   def normalize_context
-    if self.external_context
-      if self.context_id
+    unless self.external_context.blank?
+      if self.context_id.blank?
+        fact = Fact.where(external_context: self.external_context).where.not(context_id: nil).first
+        update_attributes!(context_id: fact.context_id, context_type: fact.context_type) if fact
+      else
         Fact.where(external_context: self.external_context).where(context_id: nil).each do |fact|
           fact.update_attributes!(context_id: self.context_id, context_type: self.context_type)
         end
-      else
-        fact = Fact.where(external_context: self.external_context).where.not(context_id: nil).first
-        update_attributes!(context_id: fact.context_id, context_type: fact.context_type) if fact
       end
     end
   end
