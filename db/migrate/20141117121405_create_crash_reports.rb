@@ -6,7 +6,7 @@ class CreateCrashReports < ActiveRecord::Migration
       t.string :version
       t.string :exception
       t.string :cause
-      t.string :stacktrace
+      t.text :stacktrace
       t.string :key
       t.datetime :happened_at
 
