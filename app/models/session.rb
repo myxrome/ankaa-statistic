@@ -12,6 +12,7 @@ class Session < StatisticActiveRecord
     self.finished_at ||= facts.map { |fact|
       fact.fact_details.last.happened_at
     }.max
+    self.finished_at ||= self.started_at
   end
 
   def broken?
