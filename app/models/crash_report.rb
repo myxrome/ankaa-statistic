@@ -3,7 +3,8 @@ class CrashReport < StatisticActiveRecord
   before_save :init_key
 
   def init_key
-    self.key ||= Digest::SHA1.hexdigest self.name + self.version + self.exception + self.cause + self.stacktrace
+    self.key ||= Digest::SHA1.hexdigest((self.name || '') + (self.version || '') + (self.exception || '') +
+                                            (self.cause || '') + (self.stacktrace || ''))
   end
 
 end
